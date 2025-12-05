@@ -15,7 +15,7 @@ A Nix flake for [Claude Code](https://code.claude.com) using the official static
 Run Claude Code directly with:
 
 ```bash
-nix run github:jamiebrynes/claude-code-native-nix
+nix run github:jamiebrynes7/claude-code-native-nix
 ```
 
 ### Using the Overlay
@@ -26,7 +26,7 @@ Add to your `flake.nix`:
 {
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-    claude-code.url = "github:jamiebrynes/claude-code-native-nix";
+    claude-code.url = "github:jamiebrynes7/claude-code-native-nix";
   };
 
   outputs = { self, nixpkgs, claude-code }: {
@@ -51,7 +51,7 @@ Add to your `flake.nix`:
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     home-manager.url = "github:nix-community/home-manager";
-    claude-code.url = "github:jamiebrynes/claude-code-native-nix";
+    claude-code.url = "github:jamiebrynes7/claude-code-native-nix";
   };
 
   outputs = { self, nixpkgs, home-manager, claude-code }: {
