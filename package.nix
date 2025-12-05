@@ -34,6 +34,8 @@ in stdenv.mkDerivation {
 
   dontUnpack = true;
   dontBuild = true;
+  # Required, as otherwise the resulting binary on Linux ends up just Bun's runtime.
+  dontStrip = true;
 
   nativeBuildInputs = [ makeWrapper ]
     ++ lib.optionals stdenv.isLinux [ autoPatchelfHook ];
