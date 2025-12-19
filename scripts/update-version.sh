@@ -11,9 +11,9 @@ NC='\033[0m' # No Color
 GCS_BASE="https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases"
 VERSION_FILE="version.json"
 
-echo -e "${YELLOW}Fetching latest stable version...${NC}"
-NEW_VERSION=$(curl -fsSL "$GCS_BASE/stable")
-echo -e "${GREEN}Latest stable version: $NEW_VERSION${NC}"
+echo -e "${YELLOW}Fetching latest version...${NC}"
+NEW_VERSION=$(curl -fsSL "$GCS_BASE/latest")
+echo -e "${GREEN}Latest version: $NEW_VERSION${NC}"
 
 # Get current version from version.json
 CURRENT_VERSION=$(jq -r '.version' "$VERSION_FILE")
